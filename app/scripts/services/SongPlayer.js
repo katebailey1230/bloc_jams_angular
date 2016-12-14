@@ -31,7 +31,7 @@
             if (currentSong !== song) {
             setSong(song);  
             currentSong = song;
-         }
+                
         playsong = function(song) {         
          currentBuzzObject.play(); 
          song.playing = true;

@@ -31,16 +31,15 @@
             if (currentSong !== song) {
             setSong(song);  
             currentSong = song;
-              }
-         }
+                
         playsong = function(song) {         
          currentBuzzObject.play(); 
          song.playing = true;
-        }
+        
     } else if (currentSong === song) {
          if (currentBuzzObject.isPaused()) {
              currentBuzzObject.play();
-         }
+        }
     }
 };
           return SongPlayer;
