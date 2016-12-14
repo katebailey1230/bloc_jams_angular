@@ -17,6 +17,7 @@
          })
         .state('collection', {
              url: '/collection',
+             controller: 'LandingCtrl as landing',
              templateUrl: '/templates/collection.html'
          });
      }
