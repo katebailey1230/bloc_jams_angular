@@ -1,4 +1,4 @@
-(function() {
+(function () {
      function SongPlayer(Fixtures) {
           var SongPlayer = {};
           /**
@@ -28,14 +28,11 @@
         * @type {Object}
         */
             
-            var stopSong = function(song){
-                currentBuzzObject.stop();
-                song.playing = null;
-            };
+           
             var setSong = function(song) {
                 if (currentBuzzObject) {
                 stopSong(song);
-            }
+                }
  
             currentBuzzObject = new buzz.sound(song.audioUrl, {
             formats: ['mp3'],
@@ -51,7 +48,12 @@
                 currentBuzzObject.play();
                 song.playing = true;
             };
-
+         
+            var stopSong = function(song){
+                currentBuzzObject.stop();
+                song.playing = null;
+            };
+         
           SongPlayer.play = function(song) {
             song = song || SongPlayer.currentSong;
                 if (SongPlayer.currentSong !== song) {
